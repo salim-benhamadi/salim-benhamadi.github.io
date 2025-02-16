@@ -1,0 +1,111 @@
+/* styles/components/experience.css */
+.timeline {
+    position: relative;
+    padding: var(--spacing-lg) 0;
+}
+
+.experience-item {
+    position: relative;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    background: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal),
+                box-shadow var(--transition-normal);
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--primary-blue);
+    border-radius: 2px;
+}
+
+/* Company and Role Styling */
+.experience-item h4 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: var(--spacing-xs);
+}
+
+.experience-item h5 {
+    font-size: 1.1rem;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Timeline Details */
+.experience-item .text-muted {
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.experience-item .fas {
+    width: 20px;
+    color: var(--primary-blue);
+}
+
+/* Experience List Items */
+.experience-item ul {
+    margin: var(--spacing-md) 0;
+}
+
+.experience-item li {
+    margin-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-lg);
+    position: relative;
+}
+
+.experience-item li i {
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+/* Skill Badges */
+.skill-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin: 0.25rem;
+    background-color: rgba(13, 110, 253, 0.1);
+    color: var(--primary-blue);
+    border-radius: var(--border-radius-full);
+    font-size: 0.85rem;
+    transition: all var(--transition-normal);
+}
+
+.skill-badge:hover {
+    background-color: var(--primary-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Status Badge */
+.badge {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .experience-item {
+        padding: var(--spacing-md);
+    }
+    
+    .experience-item h4 {
+        font-size: 1.1rem;
+    }
+    
+    .experience-item h5 {
+        font-size: 1rem;
+    }
+}

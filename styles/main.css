@@ -1,0 +1,51 @@
+/* styles/main.css */
+/* Import variables and utilities */
+@import 'variables.css';
+@import 'utils/layout.css';
+@import 'utils/typography.css';
+
+/* Import component styles */
+@import 'components/navbar.css';
+@import 'components/hero.css';
+@import 'components/about.css';
+@import 'components/experience.css';
+@import 'components/education.css';
+@import 'components/skills.css';
+@import 'components/publications.css';
+@import 'components/footer.css';
+@import 'components/animations.css';
+
+/* Global styles */
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Common utility classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--transition-normal),
+                transform var(--transition-normal);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+    color: var(--dark-blue);
+}
+
+/* Container max-width overrides */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}

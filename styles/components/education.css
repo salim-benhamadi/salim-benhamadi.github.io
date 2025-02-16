@@ -1,0 +1,230 @@
+/* styles/components/education.css */
+.education-section {
+    position: relative;
+    padding: var(--spacing-xl) 0;
+    background-color: #fafafa;
+}
+
+.timeline-wrapper {
+    position: relative;
+    padding: 2rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Main Timeline Line */
+.timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Content Box */
+.timeline-content {
+    width: 45%;
+    position: relative;
+    padding: 2rem;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--border-radius-md);
+    transition: transform var(--transition-normal);
+}
+
+/* Alternating Sides */
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 50%;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 50%;
+}
+
+/* Timeline Dots */
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--primary-blue);
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.timeline-dot.current {
+    background: var(--primary-blue);
+    animation: pulseDot 2s infinite;
+}
+
+/* Content Styling */
+.timeline-content:hover {
+    transform: translateY(-3px);
+}
+
+.timeline-header {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.degree-status {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.degree-status.completed {
+    color: #28a745;
+}
+
+.timeline-header h4 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.timeline-header h5 {
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.timeline-body {
+    color: #666;
+}
+
+.university-info,
+.duration,
+.location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.university-info i,
+.duration i,
+.location i {
+    width: 20px;
+    color: var(--primary-blue);
+    margin-right: 0.5rem;
+    opacity: 0.8;
+}
+
+.course-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.course-tag {
+    background: #f8f9fa;
+    color: #495057;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--border-radius-full);
+    font-size: 0.85rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.course-tag:hover {
+    background: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+/* Timeline Connectors */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    width: 2rem;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -2rem;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -2rem;
+}
+
+/* Animations */
+@keyframes pulseDot {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 69, 173, 0.2);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(0, 69, 173, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 69, 173, 0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .timeline-content {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-wrapper::before {
+        left: 0;
+    }
+
+    .timeline-dot {
+        left: 0;
+    }
+
+    .timeline-content {
+        width: calc(100% - 30px);
+        margin-left: 30px !important;
+    }
+
+    .timeline-content::before {
+        width: 1rem !important;
+        left: -1rem !important;
+    }
+
+    .timeline-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-header h5 {
+        font-size: 0.9rem;
+    }
+
+    .university-info,
+    .duration,
+    .location {
+        font-size: 0.85rem;
+    }
+}
