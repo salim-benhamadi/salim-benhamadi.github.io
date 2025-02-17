@@ -1,3 +1,5 @@
+[![pages-build-deployment](https://github.com/salim-benhamadi/salim-benhamadi.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/salim-benhamadi/salim-benhamadi.github.io/actions/workflows/pages/pages-build-deployment)
+
 # Salim Benhamadi
 
 👋 Hi there! I'm a Machine Learning Engineer specializing in computer vision, deep learning, and data science. Currently pursuing my Master's degree in ICT Internet and Multimedia Engineering at the University of Padova.
