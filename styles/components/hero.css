@@ -300,6 +300,48 @@
     }
 }
 
+.resume-download {
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 1.3s;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.8rem;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.resume-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.resume-btn i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.resume-btn:hover i {
+    transform: translateY(-1px);
+}
+
+/* Add to the existing media queries */
+@media (max-width: 768px) {
+    .resume-download {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+}
 @media (max-width: 480px) {
     .hero-grid-layout {
         padding: 1rem;

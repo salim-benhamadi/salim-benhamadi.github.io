@@ -1,4 +1,4 @@
-/* styles/components/education.css */
+/* Education Section Styles */
 .education-section {
     position: relative;
     padding: var(--spacing-xl) 0;
@@ -19,8 +19,8 @@
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(0, 69, 173, 0.1), rgba(0, 69, 173, 0.3));
     transform: translateX(-50%);
 }
 
@@ -44,8 +44,9 @@
     padding: 2rem;
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: var(--border-radius-md);
-    transition: transform var(--transition-normal);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 /* Alternating Sides */
@@ -79,14 +80,15 @@
 /* Content Styling */
 .timeline-content:hover {
     transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-header {
     margin-bottom: 1.5rem;
-    position: relative;
 }
 
 .degree-status {
+    display: inline-block;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -104,15 +106,12 @@
     font-size: 1.25rem;
     color: var(--dark-blue);
     font-weight: 600;
+    line-height: 1.4;
 }
 
 .timeline-header h5 {
     margin: 0.5rem 0 0;
     font-size: 0.95rem;
-    color: #666;
-}
-
-.timeline-body {
     color: #666;
 }
 
@@ -123,6 +122,7 @@
     align-items: center;
     margin-bottom: 0.8rem;
     font-size: 0.9rem;
+    color: #555;
 }
 
 .university-info i,
@@ -142,13 +142,13 @@
 }
 
 .course-tag {
-    background: #f8f9fa;
-    color: #495057;
+    background: rgba(0, 69, 173, 0.05);
+    color: var(--dark-blue);
     padding: 0.4rem 0.8rem;
-    border-radius: var(--border-radius-full);
+    border-radius: 20px;
     font-size: 0.85rem;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    transition: all var(--transition-normal);
+    border: 1px solid rgba(0, 69, 173, 0.1);
+    transition: all 0.3s ease;
 }
 
 .course-tag:hover {
@@ -163,8 +163,8 @@
     position: absolute;
     top: 2rem;
     width: 2rem;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 69, 173, 0.1), rgba(0, 69, 173, 0.3));
 }
 
 .timeline-item:nth-child(odd) .timeline-content::before {
@@ -175,43 +175,68 @@
     left: -2rem;
 }
 
-/* Animations */
 @keyframes pulseDot {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 69, 173, 0.2);
-    }
-    70% {
-        box-shadow: 0 0 0 6px rgba(0, 69, 173, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 69, 173, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(0, 69, 173, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 69, 173, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 69, 173, 0); }
 }
 
-/* Responsive Design */
+/* Mobile Responsiveness */
 @media (max-width: 992px) {
     .timeline-content {
-        width: 40%;
+        width: 42%;
     }
 }
 
 @media (max-width: 768px) {
-    .timeline-wrapper::before {
-        left: 0;
+    .timeline-wrapper {
+        padding: 1rem;
     }
 
-    .timeline-dot {
+    .timeline-wrapper::before {
         left: 0;
+        transform: none;
+    }
+
+    .timeline-item {
+        margin-bottom: 2rem;
+        justify-content: flex-start;
     }
 
     .timeline-content {
         width: calc(100% - 30px);
         margin-left: 30px !important;
+        margin-right: 0 !important;
+        padding: 1.5rem;
+    }
+
+    .timeline-dot {
+        left: 0;
+        transform: none;
     }
 
     .timeline-content::before {
-        width: 1rem !important;
-        left: -1rem !important;
+        width: 15px !important;
+        left: -15px !important;
+    }
+
+    .course-tags {
+        margin-top: 1rem;
+    }
+
+    .course-tag {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-wrapper {
+        padding: 0.5rem;
+    }
+
+    .timeline-content {
+        padding: 1.25rem;
     }
 
     .timeline-header h4 {
@@ -219,12 +244,25 @@
     }
 
     .timeline-header h5 {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .university-info,
     .duration,
     .location {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+    }
+
+    .course-tags {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.3rem;
+    }
+
+    .course-tag {
+        text-align: center;
+        padding: 0.25rem 0.4rem;
+        font-size: 0.75rem;
+        width: 100%;
     }
 }
