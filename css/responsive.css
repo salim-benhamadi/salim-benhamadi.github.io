@@ -1,0 +1,166 @@
+@media (max-width: 1400px) {
+  .sidebar {
+    left: 20px;
+    top: 20px;
+  }
+
+  .main-content {
+    margin-left: 340px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .skill-category.large-card {
+    grid-column: span 1;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 968px) {
+  .sidebar {
+    left: 0;
+    top: 0;
+    width: 280px;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    border-radius: 0;
+    max-height: 100vh;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 100px 24px 40px;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .main-title {
+    font-size: 42px;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badge-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .badge-image {
+    justify-content: center;
+  }
+
+  .badge-actions {
+    align-items: center;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .badge {
+    align-self: flex-start;
+  }
+
+  .cta-section {
+    padding: 40px 24px;
+  }
+
+  .cta-section h2 {
+    font-size: 32px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.4rem; }
+
+  .main-title {
+    font-size: 32px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .wave {
+    font-size: 36px;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .sidebar,
+  .mobile-toggle,
+  .sidebar-toggle,
+  .download-btn,
+  .cta-section,
+  .floating-shapes {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}

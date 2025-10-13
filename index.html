@@ -3,1160 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salim Benhamadi - Machine Learning Engineer</title>
-    
-    <!-- External CSS Libraries -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Salim Benhamadi - About</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link href="styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Salim Benhamadi</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#badges">Badges</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#awards">Achievements</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                    
-                </ul>
+    <div class="mobile-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+
+    <aside class="sidebar" id="sidebar">
+        <div class="profile">
+            <div class="profile-img-wrapper">
+                <img src="assets/images/profile.jpg" alt="Salim Benhamadi" class="profile-img">
+                <div class="status-indicator"></div>
+            </div>
+            <h1>Salim Benhamadi</h1>
+            <p class="profile-role">Machine Learning Engineer</p>
+            <p class="profile-location"><i class="fas fa-map-marker-alt"></i> Milan, Italy</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/salim-benhamadi" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/salimbenhamadi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:salim.benhamadi@studenti.unipd.it" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://kaggle.com/salimhammadi07" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+                <a href="https://leetcode.com/u/salim-benhamadi/" target="_blank" title="LeetCode"><i class="fas fa-laptop-code"></i></a>
             </div>
         </div>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active">
+                <i class="fas fa-user"></i> 
+                <span>About Me</span>
+            </a>
+            <a href="pages/experience.html" class="nav-link">
+                <i class="fas fa-briefcase"></i> 
+                <span>Experience</span>
+            </a>
+            <a href="pages/education.html" class="nav-link">
+                <i class="fas fa-graduation-cap"></i> 
+                <span>Education</span>
+            </a>
+            <a href="pages/skills.html" class="nav-link">
+                <i class="fas fa-code"></i> 
+                <span>Skills</span>
+            </a>
+            <a href="pages/badges.html" class="nav-link">
+                <i class="fas fa-certificate"></i> 
+                <span>Badges</span>
+            </a>
+            <a href="pages/awards.html" class="nav-link">
+                <i class="fas fa-trophy"></i> 
+                <span>Awards</span>
+            </a>
+            <a href="pages/publications.html" class="nav-link">
+                <i class="fas fa-book"></i> 
+                <span>Publications</span>
+            </a>
         </nav>
 
-    <!-- Hero Section -->
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="hero-background"></div>
-    <div class="hero-grid"></div>
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-grid-layout">
-                <!-- Left Side - Profile Picture -->
-                <div class="hero-left">
-                    <div class="profile-container">
-                        <div class="profile-border"></div>
-                        <div class="profile-image">
-                            <img src="assets/images/profile.jpg" alt="Salim Benhamadi" />
-                        </div>
-                    </div>
+        <div class="sidebar-footer">
+            <a href="assets/resume.pdf" download class="download-btn">
+                <i class="fas fa-download"></i>
+                <span>Download CV</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="intro-section">
+            <div class="greeting">
+                <span class="wave">👋</span>
+                <h2>Hello, I'm Salim</h2>
+            </div>
+            <h1 class="main-title">Machine Learning Engineer specializing in Computer Vision & NLP</h1>
+            <p class="tagline">Transforming complex data into actionable insights through advanced AI solutions</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-card">
+                <div class="about-icon">
+                    <i class="fas fa-bullseye"></i>
                 </div>
-                
-                <!-- Right Side - Text Content -->
-                <div class="hero-right">
-                    <div class="intro-text">
-                        <span class="greeting">Hi there! 👋</span>
-                        <h1 class="name">Salim Benhamadi</h1>
-                        <div class="title-wrapper">
-                            <h2 class="position">Machine Learning Engineer</h2>
-                            <p class="description">My neural networks are like my coffee - deep and complex, with occasional unexpected outputs ☕</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/salim-benhamadi" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/salimbenhamadi/" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:salim.benhamadi@studenti.unipd.it" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://kaggle.com/salimhammadi07" target="_blank" aria-label="Kaggle">
-                            <i class="fab fa-kaggle"></i>
-                        </a>
-                        <a href="https://leetcode.com/u/salim-benhamadi/" target="_blank" aria-label="LeetCode">
-                            <i class="fas fa-laptop-code"></i>
-                    
-                    </div>
-                    <div class="resume-download">
-                        <a href="assets/resume.pdf" download class="resume-btn">
-                            <i class="fas fa-download me-2"></i>
-                            Download Resume
-                        </a>
-                    </div>
+                <h3>My Focus</h3>
+                <p>I'm passionate about building robust machine learning solutions with a strong focus on Computer Vision and Natural Language Processing. My work bridges the gap between cutting-edge research and real-world applications.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="about-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>What I Do</h3>
+                <p>From satellite imagery analysis for agricultural monitoring to semiconductor manufacturing optimization, I develop end-to-end ML pipelines that solve complex problems. I specialize in data acquisition, preprocessing, feature engineering, and model deployment.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="about-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>My Approach</h3>
+                <p>I believe in continuous learning and staying at the forefront of AI innovation. My approach combines rigorous statistical analysis with creative problem-solving to deliver impactful solutions that make a real difference.</p>
+            </div>
+        </div>
+        <div class="interests-section">
+            <h2 class="section-title">Research/Work Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <i class="fas fa-eye"></i>
+                    <h4>Computer Vision</h4>
+                    <p>Image classification, object detection, semantic segmentation</p>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-language"></i>
+                    <h4>Natural Language Processing</h4>
+                    <p>Text analysis, sentiment analysis, LLM fine-tuning</p>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-brain"></i>
+                    <h4>Deep Learning</h4>
+                    <p>Neural networks, transformers, GANs</p>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Time Series Analysis</h4>
+                    <p>Forecasting, anomaly detection, pattern recognition</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="lead">Hello! 👋 I’m Salim Benhamadi, a Machine Learning Engineer with a strong focus on Computer Vision and NLP. I’m passionate about transforming complex data into valuable insights through advanced modeling and data analysis. Skilled in data acquisition, cleansing, and statistical techniques, I enjoy building robust solutions that make a real impact. Let’s connect!</p>
-            
-            <!-- Statistics -->
-            <div class="row mt-5 text-center">
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="stat-card">
-                        <h3 class="stat-number" data-value="70">70</h3>
-                        <p>Leetcode Solved</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="stat-card">
-                        <h3 class="stat-number" data-value="3">3</h3>
-                        <p>Publications</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="stat-card">
-                        <h3 class="stat-number" data-value="1">1</h3>
-                        <p>Years Experience</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="stat-card">
-                        <h3 class="stat-number" data-value="12">12</h3>
-                        <p>Certifications</p>
-                    </div>
-                </div>
+        <div class="cta-section">
+            <h2 style="color : white">Let's Work Together</h2>
+            <p style="color : white">I'm always interested in hearing about new opportunities and collaborations.</p>
+            <div class="cta-buttons">
+                <a href="mailto:salim.benhamadi@studenti.unipd.it" class="cta-btn primary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+                <a href="pages/experience.html" class="cta-btn secondary">
+                    <i class="fas fa-briefcase"></i> View My Work
+                </a>
             </div>
         </div>
-    </section>
+    </main>
 
-
-<!-- Experience Section -->
-<section id="experience" class="section bg-light fade-in">
-    <div class="container">
-        <h2 class="section-title">Professional Experience</h2>
-        
-        <!-- Timeline -->
-        <div class="timeline">
-            <!-- Saturnalia -->
-            <div class="experience-item fade-in">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h4 class="mb-1">Machine Learning Engineer - Research & Development</h4>
-                    <span class="badge bg-primary">Present</span>
-                </div>
-                <h5 class="text-primary mb-2">Saturnalia</h5>
-                <p class="text-muted mb-2">
-                    <i class="fas fa-calendar-alt me-2"></i>June 2025 - Present
-                    <i class="fas fa-map-marker-alt ms-3 me-2"></i>Pavia, Italy
-                </p>
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Conducted research on crop damage detection using satellite imagery data to develop automated agricultural monitoring solutions
-                    </li>
-                </ul>
-                <div class="mt-3">
-                    <span class="skill-badge">Computer Vision</span>
-                    <span class="skill-badge">Remote Sensing</span>
-                    <span class="skill-badge">Geospatial Analysis</span>
-                    <span class="skill-badge">Crop Health Assessment</span>
-                </div>
-            </div>
-
-            <!-- Infineon Technologies -->
-            <div class="experience-item fade-in">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h4 class="mb-1">Machine Learning Intern</h4>
-                </div>
-                <h5 class="text-primary mb-2">Infineon Technologies</h5>
-                <p class="text-muted mb-2">
-                    <i class="fas fa-calendar-alt me-2"></i>March 2024 - June 2025
-                    <i class="fas fa-map-marker-alt ms-3 me-2"></i>Padova, Italy
-                </p>
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Developed an image clustering tool with anomaly detection, reducing data analysis time
-                    </li>
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Automated workflows with a tool for automatic report generation, improving efficiency
-                    </li>
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Created a Python library for reading and analyzing production data
-                    </li>
-                </ul>
-                <div class="mt-3">
-                    <span class="skill-badge">Image Clustering</span>
-                    <span class="skill-badge">Anomaly Detection</span>
-                    <span class="skill-badge">Process Automation</span>
-                    <span class="skill-badge">Python Development</span>
-                </div>
-            </div>
-
-            <!-- Research Trainee -->
-            <div class="experience-item fade-in">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h4 class="mb-1">Research Trainee</h4>
-                </div>
-                <h5 class="text-primary mb-2">University Of Padova</h5>
-                <p class="text-muted mb-2">
-                    <i class="fas fa-calendar-alt me-2"></i>October 2023 - October 2024
-                    <i class="fas fa-map-marker-alt ms-3 me-2"></i>Padova, Italy
-                </p>
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Analyzed head and hand motion data to predict user behavior in VR Games
-                    </li>
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Conducted data preprocessing and feature engineering to achieve 95% model accuracy
-                    </li>
-                </ul>
-                <div class="mt-3">
-                    <span class="skill-badge">VR Data Analysis</span>
-                    <span class="skill-badge">Motion Analysis</span>
-                    <span class="skill-badge">Feature Engineering</span>
-                    <span class="skill-badge">Machine Learning</span>
-                </div>
-            </div>
-
-            <!-- Prorob -->
-            <div class="experience-item fade-in">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h4 class="mb-1">Data Scientist Intern</h4>
-                </div>
-                <h5 class="text-primary mb-2">Prorob</h5>
-                <p class="text-muted mb-2">
-                    <i class="fas fa-calendar-alt me-2"></i>February 2023 - June 2023
-                    <i class="fas fa-map-marker-alt ms-3 me-2"></i>Vicenza, Italy
-                </p>
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Analyzed manufacturing data using Python to identify patterns and trends
-                    </li>
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Conducted predictive analysis on KPIs to detect potential issues
-                    </li>
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Assisted in anomaly detection to optimize operational efficiency
-                    </li>
-                </ul>
-                <div class="mt-3">
-                    <span class="skill-badge">Data Analysis</span>
-                    <span class="skill-badge">Predictive Analytics</span>
-                    <span class="skill-badge">KPI Monitoring</span>
-                    <span class="skill-badge">Manufacturing Analytics</span>
-                </div>
-            </div>
-
-            <!-- PIxemantic -->
-            <div class="experience-item fade-in">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h4 class="mb-1">Machine Learning Intern</h4>
-                </div>
-                <h5 class="text-primary mb-2">PIxemantic</h5>
-                <p class="text-muted mb-2">
-                    <i class="fas fa-calendar-alt me-2"></i>June 2022 - September 2022
-                    <i class="fas fa-map-marker-alt ms-3 me-2"></i>Tunis, Tunisia
-                </p>
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Developed an automated system for data extraction from financial statements using OCR technology
-                    </li>
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Improved data accuracy on balance sheets, reducing manual entry errors
-                    </li>
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Significantly decreased processing time for balance sheets by 90%
-                    </li>
-                </ul>
-                <div class="mt-3">
-                    <span class="skill-badge">OCR</span>
-                    <span class="skill-badge">Process Automation</span>
-                    <span class="skill-badge">Data Extraction</span>
-                    <span class="skill-badge">Financial Data</span>
-                </div>
-            </div>
-
-            <!-- eDonec -->
-            <div class="experience-item fade-in">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h4 class="mb-1">Web Development Intern</h4>
-                </div>
-                <h5 class="text-primary mb-2">eDonec</h5>
-                <p class="text-muted mb-2">
-                    <i class="fas fa-calendar-alt me-2"></i>July 2021 - August 2021
-                    <i class="fas fa-map-marker-alt ms-3 me-2"></i>Tunis, Tunisia
-                </p>
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Collaborated with a team of 6 to develop an eCommerce website for eDonec
-                    </li>
-                    <li class="mb-2">
-                        <i class="fas fa-check-circle text-primary me-2"></i>
-                        Ensured code quality through rigorous testing and debugging for 100% compatibility across all devices and browsers
-                    </li>
-                </ul>
-                <div class="mt-3">
-                    <span class="skill-badge">Web Development</span>
-                    <span class="skill-badge">eCommerce</span>
-                    <span class="skill-badge">Quality Assurance</span>
-                    <span class="skill-badge">Cross-platform Testing</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Education Section -->
-<section id="education" class="education-section">
-    <div class="container">
-        <h2 class="section-title">Education</h2>
-        
-        <div class="timeline-wrapper">
-            <!-- Master's Degree -->
-            <div class="timeline-item">
-                <div class="timeline-content fade-in">
-                    <div class="timeline-header">
-                        <span class="degree-status completed">COMPLETED</span>
-                        <h4>Master's Degree</h4>
-                        <h5>ICT Internet and Multimedia Engineering</h5>
-                    </div>
-                    <div class="timeline-body">
-                        <div class="university-info">
-                            <i class="fas fa-university"></i>
-                            <span>Università degli studi di padova (UNIPD)</span>
-                        </div>
-                        <div class="duration">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>10/2023 - 02/2025</span>
-                        </div>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Padova, Italy</span>
-                        </div>
-                        <div class="coursework">
-                            <h6>Principal Coursework:</h6>
-                            <div class="course-tags">
-                                <span class="course-tag">Computer Vision</span>
-                                <span class="course-tag">Internet</span>
-                                <span class="course-tag">Game Theory</span>
-                                <span class="course-tag">IoT & Smart Cities</span>
-                                <span class="course-tag">Natural Language Processing</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-dot current"></div>
-            </div>
-
-            <!-- Erasmus+ -->
-            <div class="timeline-item">
-                <div class="timeline-content fade-in">
-                    <div class="timeline-header">
-                        <span class="degree-status completed">Completed</span>
-                        <h4>Erasmus+ Student Mobility</h4>
-                        <h5>Exchange Program</h5>
-                    </div>
-                    <div class="timeline-body">
-                        <div class="university-info">
-                            <i class="fas fa-university"></i>
-                            <span>Università degli studi di padova (UNIPD)</span>
-                        </div>
-                        <div class="duration">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>09/2022 - 07/2023</span>
-                        </div>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Padova, Italy</span>
-                        </div>
-                        <div class="coursework">
-                            <h6>Principal Coursework:</h6>
-                            <div class="course-tags">
-                                <span class="course-tag">Machine Learning</span>
-                                <span class="course-tag">Neural Networks</span>
-                                <span class="course-tag">Deep Learning</span>
-                                <span class="course-tag">Reinforcement Learning</span>
-                                <span class="course-tag">Human Data Analytics</span>
-                                <span class="course-tag">Scientific Computing</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-
-            <!-- ICT Engineer's Degree -->
-            <div class="timeline-item">
-                <div class="timeline-content fade-in">
-                    <div class="timeline-header">
-                        <span class="degree-status completed">Completed</span>
-                        <h4>ICT Engineer's Degree</h4>
-                        <h5>Engineering</h5>
-                    </div>
-                    <div class="timeline-body">
-                        <div class="university-info">
-                            <i class="fas fa-university"></i>
-                            <span>Higher School of Communications of Tunis (SUP'COM)</span>
-                        </div>
-                        <div class="duration">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>09/2020 - 07/2023</span>
-                        </div>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Ariana, Tunisia</span>
-                        </div>
-                        <div class="coursework">
-                            <h6>Principal Coursework:</h6>
-                            <div class="course-tags">
-                                <span class="course-tag">Probability</span>
-                                <span class="course-tag">Statistical Inference</span>
-                                <span class="course-tag">Optimization</span>
-                                <span class="course-tag">Cloud</span>
-                                <span class="course-tag">Big Data</span>
-                                <span class="course-tag">Data Science</span>
-                                <span class="course-tag">Artificial Intelligence</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-
-            <!-- Pre-engineering Studies -->
-            <div class="timeline-item">
-                <div class="timeline-content fade-in">
-                    <div class="timeline-header">
-                        <span class="degree-status completed">Completed</span>
-                        <h4>Pre-engineering Studies</h4>
-                        <h5>Mathematics and Physics</h5>
-                    </div>
-                    <div class="timeline-body">
-                        <div class="university-info">
-                            <i class="fas fa-university"></i>
-                            <span>Preparatory Institute For Engineering Studies of Nabeul (IPEIN)</span>
-                        </div>
-                        <div class="duration">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>09/2018 - 07/2020</span>
-                        </div>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Nabeul, Tunisia</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-        </div>
-    </div>
-</section>
- <!-- Skills Section -->
-<section id="skills" class="skills-section py-5">
-    <div class="container">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="row g-4">
-            <!-- Core ML -->
-            <div class="col-md-12 col-lg-8">
-                <div class="skill-card large">
-                    <div class="skill-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>Machine Learning</h3>
-                    </div>
-                    <div class="skill-body">
-                        <div class="skill-group">
-                            <h4>Core ML</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Supervised Learning</span>
-                                <span class="skill-tag">Unsupervised Learning</span>
-                                <span class="skill-tag">Classification</span>
-                                <span class="skill-tag">Regression</span>
-                                <span class="skill-tag">Clustering</span>
-                                <span class="skill-tag">Anomaly Detection</span>
-                                <span class="skill-tag">Feature Engineering</span>
-                                <span class="skill-tag">Feature Selection</span>
-                                <span class="skill-tag">Model Selection</span>
-                                <span class="skill-tag">Hyperparameter Tuning</span>
-                                <span class="skill-tag">Cross-Validation</span>
-                                <span class="skill-tag">Time Series Analysis</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <h4>Deep Learning</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Neural Networks</span>
-                                <span class="skill-tag">CNN</span>
-                                <span class="skill-tag">RNN</span>
-                                <span class="skill-tag">LSTM</span>
-                                <span class="skill-tag">GRU</span>
-                                <span class="skill-tag">Transfer Learning</span>
-                                <span class="skill-tag">Attention Mechanisms</span>
-                                <span class="skill-tag">Transformers</span>
-                                <span class="skill-tag">GANs</span>
-                                <span class="skill-tag">AutoEncoders</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <h4>Computer Vision</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Image Classification</span>
-                                <span class="skill-tag">Object Detection</span>
-                                <span class="skill-tag">Image Segmentation</span>
-                                <span class="skill-tag">Feature Extraction</span>
-                                <span class="skill-tag">OCR</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <h4>NLP & LLMs</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Text Classification</span>
-                                <span class="skill-tag">Named Entity Recognition</span>
-                                <span class="skill-tag">Sentiment Analysis</span>
-                                <span class="skill-tag">Text Embeddings</span>
-                                <span class="skill-tag">Language Models</span>
-                                <span class="skill-tag">LLM Fine-tuning</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Programming -->
-            <div class="col-md-6 col-lg-4">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Programming</h3>
-                    </div>
-                    <div class="skill-body">
-                        <div class="proficiency-level proficient">
-                            Python, JavaScript
-                        </div>
-                        <div class="proficiency-level familiar">
-                            C/C++, SQL
-                        </div>
-                        <div class="skill-tags mt-3">
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Linux</span>
-                            <span class="skill-tag">Bash</span>
-                            <span class="skill-tag">Docker</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ML Tools & Frameworks -->
-            <div class="col-md-6 col-lg-4">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>ML Tools & Frameworks</h3>
-                    </div>
-                    <div class="skill-body">
-                        <div class="skill-tags">
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">Keras</span>
-                            <span class="skill-tag">FastAI</span>
-                            <span class="skill-tag">Scikit-Learn</span>
-                            <span class="skill-tag">Hugging Face</span>
-                            <span class="skill-tag">OpenCV</span>
-                            <span class="skill-tag">YOLO</span>
-                            <span class="skill-tag">Numpy</span>
-                            <span class="skill-tag">Pandas</span>
-                            <span class="skill-tag">Matplotlib</span>
-                            <span class="skill-tag">Seaborn</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Soft Skills -->
-            <div class="col-md-6 col-lg-4">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-users"></i>
-                        <h3>Soft Skills</h3>
-                    </div>
-                    <div class="skill-body">
-                        <div class="skill-tags">
-                            <span class="skill-tag">Problem Solving</span>
-                            <span class="skill-tag">Research</span>
-                            <span class="skill-tag">Technical Writing</span>
-                            <span class="skill-tag">Project Management</span>
-                            <span class="skill-tag">Team Collaboration</span>
-                            <span class="skill-tag">Communication</span>
-                            <span class="skill-tag">Agile/Scrum</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Badges Section -->
-<section id="badges" class="badges-section py-5">
-    <div class="container">
-        <h2 class="section-title">Certifications & Badges</h2>
-        
-        <div class="badges-container">
-            <!-- ICT Master's Degree -->
-            <div class="badge-card fade-in">
-                <div class="badge-image">
-                    <img src="assets/images/badges/assertion-GP-GLmhFQgCzhqysvzWNqA.png" alt="International Master's Degree in ICT For Internet and Multimedia">
-                </div>
-                <div class="badge-content">
-                    <h3>International Master's Degree in ICT For Internet and Multimedia </h3>
-                    <p class="badge-issuer">
-                        <i class="fas fa-certificate"></i> University Of Padova
-                    </p>
-                    <p class="badge-date">
-                        <i class="fas fa-calendar-alt"></i> Feburary 2025
-                    </p>
-                    <div class="badge-description">
-                        <p>The holder or holder of this Badge has obtained an international Master's Degree in ICT For Internet and Multimedia from the University of Padua.
-                        </p>
-                    </div>
-                    <div class="badge-skills">
-                        <span class="skill-badge">Master's Degree</span>
-                        <span class="skill-badge">ICT</span>
-                        <span class="skill-badge">Internet</span>
-                        <span class="skill-badge">Multimedia</span>
-                    </div>
-                </div>
-                <div class="badge-actions">
-                    <a href="https://bestr.it/award/show/GP-GLmhFQgCzhqysvzWNqA" target="_blank" class="btn btn-outline-primary btn-sm">
-                        <i class="fas fa-external-link-alt"></i> Verify
-                    </a>
-                </div>
-            </div>
-
-            <!-- English B2 -->
-            <div class="badge-card fade-in">
-                <div class="badge-image">
-                    <img src="assets/images/badges/assertion-cVPh0vPmQbOEZz7yLhdxtQ.png" alt="English B2 - Speaking">
-                </div>
-                <div class="badge-content">
-                    <h3>English B2 - Speaking</h3>
-                    <p class="badge-issuer">
-                        <i class="fas fa-certificate"></i> University Of Padova
-                    </p>
-                    <p class="badge-date">
-                        <i class="fas fa-calendar-alt"></i> January 2024
-                    </p>
-                    <div class="badge-description">
-                        <p>The Badge Linguistic suitability for CLA - English B2 - Speaking certifies the achievement of a level equivalent to B2 for this skill for the English language compared to the level expected by QCER (Common European Framework of Reference) or CEFR (Common European Framework of Reference for languages), the European system that defines the standard of language skills.</p>
-                    </div>
-                    <div class="badge-skills">
-                        <span class="skill-badge">Linguistic suitability</span>
-                        <span class="skill-badge">Linguistic attestation</span>
-                        <span class="skill-badge">English language</span>
-                        <span class="skill-badge">Foreign language</span>
-                    </div>
-                </div>
-                <div class="badge-actions">
-                    <a href="https://bestr.it/award/show/cVPh0vPmQbOEZz7yLhdxtQ" target="_blank" class="btn btn-outline-primary btn-sm">
-                        <i class="fas fa-external-link-alt"></i> Verify
-                    </a>
-                </div>
-            </div>
-
-            <!-- Placeholder for additional badges -->
-            <div class="badge-card add-badge fade-in">
-                <div class="add-badge-content">
-                    <i class="fas fa-plus-circle"></i>
-                    <p>More certifications coming soon!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Awards Section -->
-<section id="awards" class="py-5 bg-light fade-in">
-    <div class="container">
-        <h2 class="section-title">Awards & Achievements</h2>
-
-        <div class="row g-4">
-            <!-- Fastweb Hackathon -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon silver">
-                        <span>Award</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>FastwebAI Hackathon</h3>
-                        <p class="award-details">
-                            <i class="fas fa-medal"></i> Best Inclusion Project
-                            <br>
-                            <i class="fas fa-calendar"></i> September 11-12, 2025
-                        </p>
-                        <p class="award-org">Fastweb</p>
-                        <div class="award-description">
-                            <p>Created EmotiSense AI, a supportive platform for neurodivergent individuals to develop emotional awareness through AI-powered insights.</p>
-                        </div>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">Emotional AI</span>
-                            <span class="skill-badge">Neurodiversity</span>
-                            <span class="skill-badge">Accessibility</span>
-                            <span class="skill-badge">Natural Language Processing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Meets Medicine Hackathon -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon silver">
-                        <span>2nd Place</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fas fa-stethoscope"></i>
-                        </div>
-                        <h3>AI Meets Medicine: Collaborative Solutions for Healthcare</h3>
-                        <p class="award-details">
-                            <i class="fas fa-medal"></i> Second Prize
-                            <br>
-                            <i class="fas fa-calendar"></i> September 3-4, 2025
-                        </p>
-                        <p class="award-org">Elty di DaVinci Salute & Google Cloud</p>
-                        <div class="award-description">
-                            <p>Developed AI-accessible hearing health solutions for early detection of hearing loss.</p>
-                        </div>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">Healthcare AI</span>
-                            <span class="skill-badge">Hearing Loss Detection</span>
-                            <span class="skill-badge">Accessibility</span>
-                            <span class="skill-badge">Medical Technology</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AirQo Challenge -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon">
-                        <span>18th Place</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fas fa-wind"></i>
-                        </div>
-                        <h3>AirQo African Air Quality Prediction Challenge</h3>
-                        <p class="award-details">
-                            <i class="fas fa-trophy"></i> Ranked 18/514
-                            <br>
-                            <i class="fas fa-calendar"></i> June 2024
-                        </p>
-                        <p class="award-org">Zindi Africa</p>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">Time Series</span>
-                            <span class="skill-badge">Environmental Data</span>
-                            <span class="skill-badge">Prediction</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Operating System Detection -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon">
-                        <span>20th Place</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>OS and Browser Identification Challenge</h3>
-                        <p class="award-details">
-                            <i class="fas fa-trophy"></i> Ranked 20/84
-                            <br>
-                            <i class="fas fa-calendar"></i> February 2023
-                        </p>
-                        <p class="award-org">Zindi Africa</p>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">Network Security</span>
-                            <span class="skill-badge">Classification</span>
-                            <span class="skill-badge">TLS Traffic</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Hackathon 3.0 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon gold">
-                        <span>1st Place</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>AI Hackathon 3.0 - EEG Analysis</h3>
-                        <p class="award-details">
-                            <i class="fas fa-medal"></i> First Prize (MAE: 0.58)
-                            <br>
-                            <i class="fas fa-calendar"></i> July 2022
-                        </p>
-                        <p class="award-org">IEEE ENSI Student Branch</p>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">EEG Signal Processing</span>
-                            <span class="skill-badge">Regression</span>
-                            <span class="skill-badge">Medical AI</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Value Hack'prise -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon">
-                        <span>4th Place</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Value - Hack'prise</h3>
-                        <p class="award-details">
-                            <i class="fas fa-trophy"></i> Ranked 4/40
-                            <br>
-                            <i class="fas fa-calendar"></i> June 2022
-                        </p>
-                        <p class="award-org">ENSI Junior Entreprise</p>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">Portfolio Optimization</span>
-                            <span class="skill-badge">Time Series</span>
-                            <span class="skill-badge">Stock Market</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ML Olympiad -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon silver">
-                        <span>2nd Prize</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fab fa-google"></i>
-                        </div>
-                        <h3>ML Olympiad - North African Culture</h3>
-                        <p class="award-details">
-                            <i class="fas fa-medal"></i> Second Prize
-                            <br>
-                            <i class="fas fa-calendar"></i> March 2022
-                        </p>
-                        <p class="award-org">Google Developers</p>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">Computer Vision</span>
-                            <span class="skill-badge">Cultural Heritage</span>
-                            <span class="skill-badge">Classification</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Faulty Sensor Challenge -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon">
-                        <span>14th Place</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fas fa-sensor"></i>
-                        </div>
-                        <h3>UmojaHack: Faulty Air Quality Sensor</h3>
-                        <p class="award-details">
-                            <i class="fas fa-trophy"></i> Ranked 14/493
-                            <br>
-                            <i class="fas fa-calendar"></i> March 2022
-                        </p>
-                        <p class="award-org">UmojaHack Africa 2022</p>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">Anomaly Detection</span>
-                            <span class="skill-badge">Sensor Data</span>
-                            <span class="skill-badge">Classification</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- GO Data Science -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon silver">
-                        <span>2nd Prize</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fas fa-road"></i>
-                        </div>
-                        <h3>GO Data Science (GODS)</h3>
-                        <p class="award-details">
-                            <i class="fas fa-medal"></i> Second Prize
-                            <br>
-                            <i class="fas fa-calendar"></i> February 2022
-                        </p>
-                        <p class="award-org">IEEE ENSI Student Branch</p>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">Computer Vision</span>
-                            <span class="skill-badge">Image Classification</span>
-                            <span class="skill-badge">Infrastructure</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Blockchain Hackathon -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon bronze">
-                        <span>3rd Prize</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fas fa-link"></i>
-                        </div>
-                        <h3>Virtual Blockchain Hackathon</h3>
-                        <p class="award-details">
-                            <i class="fas fa-medal"></i> Third Prize
-                            <br>
-                            <i class="fas fa-calendar"></i> January 2022
-                        </p>
-                        <p class="award-org">Decentralize Impact & Dar Blockchain</p>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">Blockchain</span>
-                            <span class="skill-badge">Solidity</span>
-                            <span class="skill-badge">Web3</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- GeoAI Hack -->
-            <div class="col-lg-4 col-md-6">
-                <div class="award-card">
-                    <div class="award-ribbon">
-                        <span>9th Place</span>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-icon">
-                            <i class="fas fa-satellite"></i>
-                        </div>
-                        <h3>GeoAI Hack 2022 - Crop Classification</h3>
-                        <p class="award-details">
-                            <i class="fas fa-trophy"></i> Ranked 9/77
-                            <br>
-                            <i class="fas fa-calendar"></i> April 2022
-                        </p>
-                        <p class="award-org">Zindi Africa</p>
-                        <div class="award-tags mt-3">
-                            <span class="skill-badge">Satellite Imagery</span>
-                            <span class="skill-badge">Agriculture</span>
-                            <span class="skill-badge">Time Series</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Publications Section -->
-<section id="publications" class="py-5 fade-in">
-    <div class="container">
-        <h2 class="section-title">Publications</h2>
-        
-        <div class="publications-wrapper">
-            <!-- VR User Identification Paper -->
-            <div class="publication-card">
-                <div class="publication-header">
-                    <h3>Movement- and Traffic-based User Identification in Commercial Virtual Reality Applications: Threats and Opportunities</h3>
-                    <div class="publication-status">Accepted</div>
-                </div>
-                <div class="publication-body">
-                    <div class="publication-info">
-                        <div class="authors">
-                            <i class="fas fa-users"></i>
-                            Sara Baldoni, Salim Benhamadi, Federico Chiariotti, Michele Zorzi, Federica Battisti
-                        </div>
-                        <hr>
-                        <div class="publication-venue">
-                            <i class="fas fa-book"></i>
-                            IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR), 2025
-                        </div>
-                        <div class="publication-date">
-                            <i class="fas fa-calendar"></i>
-                            January 27, 2025
-                        </div>
-                    </div>
-                    <div class="publication-abstract">
-                        <p>
-                            With the unprecedented diffusion of virtual reality, the number of application scenarios is continuously growing. As commercial and gaming applications become pervasive, the need for secure and convenient identification of users, often overlooked by research in immersive media, is becoming increasingly pressing. This work investigates user identification through movement patterns and data traffic traces in commercial VR games, analyzing both opportunities for content customization and privacy implications.
-                        </p>
-                    </div>
-                    <div class="publication-footer">
-                        <div class="publication-tags">
-                            <span class="skill-badge">Virtual Reality</span>
-                            <span class="skill-badge">User Identification</span>
-                            <span class="skill-badge">Privacy</span>
-                            <span class="skill-badge">Network Analysis</span>
-                            <span class="skill-badge">Security</span>
-                        </div>
-                        <div class="publication-links">
-                            <a href="https://arxiv.org/abs/2501.16326" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-file-pdf"></i> PDF
-                            </a>
-                            <a href="https://github.com/salim-benhamadi/VR-User-Identification" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-code"></i> Code
-                            </a>
-                            <a href="assets/citations/vr-2025.bib" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-quote-right"></i> Cite
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Automated Semiconductor Test Data Analysis Paper -->
-            <div class="publication-card">
-                <div class="publication-header">
-                    <h3>Automated Semiconductor Test Data Analysis Using a Hybrid Deep Learning Pipeline</h3>
-                    <div class="publication-status">Accepted</div>
-                </div>
-                <div class="publication-body">
-                    <div class="publication-info">
-                        <div class="authors">
-                            <i class="fas fa-users"></i>
-                            Salim Benhamadi, Massimo Pierobon, Giorgia Cassetta, Sabrina Santirosi
-                        </div>
-                        <hr>
-                        <div class="publication-venue">
-                            <i class="fas fa-book"></i>
-                            5th European Automotive Reliability, Test and Safety Workshop (eARTS), 2025
-                        </div>
-                        <div class="publication-date">
-                            <i class="fas fa-calendar"></i>
-                            May 29-30, 2025
-                        </div>
-                    </div>
-                    <div class="publication-abstract">
-                        <p>
-                            Manual analysis of test data plots in semiconductor manufacturing creates a significant bottleneck in production optimization, with product engineers dedicating extensive hours to reviewing patterns, anomalies, and making assessments. This study presents an automated approach based on computer vision and machine learning to streamline this process. We developed a multi-stage pipeline that detects and extracts plots from various document formats using Faster R-CNN, generates feature embeddings via Vision Transformer (ViT-B/32), and employs Affinity Propagation clustering alongside Isolation Forest for anomaly detection.
-                        </p>
-                    </div>
-                    <div class="publication-footer">
-                        <div class="publication-tags">
-                            <span class="skill-badge">Semiconductor Testing</span>
-                            <span class="skill-badge">Deep Learning</span>
-                            <span class="skill-badge">Computer Vision</span>
-                            <span class="skill-badge">Anomaly Detection</span>
-                            <span class="skill-badge">Machine Learning</span>
-                        </div>
-                        <div class="publication-links">
-                            <!-- Placeholder links that will be updated once available -->
-                            <a href="#" class="btn btn-outline-secondary btn-sm disabled">
-                                <i class="fas fa-file-pdf"></i> PDF (Coming Soon)
-                            </a>
-                            <a href="#" class="btn btn-outline-secondary btn-sm disabled">
-                                <i class="fas fa-code"></i> Code (Coming Soon)
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Optimization of Test Insertions Paper -->
-            <div class="publication-card">
-                <div class="publication-header">
-                    <h3>Optimization of Test Insertions in Semiconductor Manufacturing Using Reinforcement Learning</h3>
-                    <div class="publication-status">Accepted</div>
-                </div>
-                <div class="publication-body">
-                    <div class="publication-info">
-                        <div class="authors">
-                            <i class="fas fa-users"></i>
-                            Salim Benhamadi, Alin Alexandru Caluseriu, Giorgia Cassetta, Marco D'Acunzo, Marius Sorin Neagoe
-                        </div>
-                        <hr>
-                        <div class="publication-venue">
-                            <i class="fas fa-book"></i>
-                            5th European Automotive Reliability, Test and Safety Workshop (eARTS), 2025
-                        </div>
-                        <div class="publication-date">
-                            <i class="fas fa-calendar"></i>
-                            May 29-30, 2025
-                        </div>
-                    </div>
-                    <div class="publication-abstract">
-                        <p>
-                            In semiconductor manufacturing, test insertion reduction—the strategic elimination of one or more temperature-based test insertions—offers significant cost and time savings, but requires carefully optimizing test limits to maintain quality control. This paper addresses the challenge of test insertion reduction through advanced limit optimization techniques that balance multiple competing objectives: maximizing failure detection while minimizing false rejections and maintaining process capability. We propose a reinforcement learning (RL) based approach for automatically optimizing test limits to enable effective test insertion reduction.
-                        </p>
-                    </div>
-                    <div class="publication-footer">
-                        <div class="publication-tags">
-                            <span class="skill-badge">Reinforcement Learning</span>
-                            <span class="skill-badge">Semiconductor Testing</span>
-                            <span class="skill-badge">Optimization</span>
-                            <span class="skill-badge">Quality Control</span>
-                            <span class="skill-badge">Multi-objective Optimization</span>
-                        </div>
-                        <div class="publication-links">
-                            <!-- Placeholder links that will be updated once available -->
-                            <a href="#" class="btn btn-outline-secondary btn-sm disabled">
-                                <i class="fas fa-file-pdf"></i> PDF (Coming Soon)
-                            </a>
-                            <a href="#" class="btn btn-outline-secondary btn-sm disabled">
-                                <i class="fas fa-code"></i> Code (Coming Soon)
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Footer -->
-    <footer class="footer text-white py-4">
-        <div class="container text-center">
-            <div class="social-links mb-3">
-                <a href="https://github.com/salim-benhamadi" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/salimbenhamadi/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:salim.benhamadi@studenti.unipd.it"><i class="fas fa-envelope"></i></a>
-                <a href="https://kaggle.com/salimhammadi07" target="_blank"><i class="fab fa-kaggle"></i></a>
-                <a href="https://leetcode.com/u/salim-benhamadi/" target="_blank" aria-label="LeetCode"><i class="fas fa-laptop-code"></i></a>
-            </div>
-            <p>© 2024 Salim Benhamadi. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

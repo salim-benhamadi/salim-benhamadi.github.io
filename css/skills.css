@@ -1,0 +1,120 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.skill-category {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.skill-category:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.skill-category.large-card {
+  grid-column: span 2;
+}
+
+.skill-category h3 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+
+.skill-category i {
+  color: var(--primary);
+  font-size: 24px;
+}
+
+.skill-subcategory {
+  margin-bottom: 24px;
+}
+
+.skill-subcategory:last-child {
+  margin-bottom: 0;
+}
+
+.skill-subcategory h4 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-item {
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  transition: all 0.3s;
+}
+
+.skill-item:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill-tag {
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.skill-tag:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: #000000;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.proficiency-section {
+  margin-bottom: 20px;
+}
+
+.proficiency-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.proficiency-langs {
+  color: #64748b;
+  font-size: 15px;
+}

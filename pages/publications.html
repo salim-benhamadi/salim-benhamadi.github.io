@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Salim Benhamadi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="mobile-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+
+    <aside class="sidebar" id="sidebar">
+        <div class="profile">
+            <img src="../assets/images/profile.jpg" alt="Salim Benhamadi" class="profile-img">
+            <h1>Salim Benhamadi</h1>
+            <p>Machine Learning Engineer</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/salim-benhamadi" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/salimbenhamadi/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:salim.benhamadi@studenti.unipd.it"><i class="fas fa-envelope"></i></a>
+                <a href="https://kaggle.com/salimhammadi07" target="_blank"><i class="fab fa-kaggle"></i></a>
+                <a href="https://leetcode.com/u/salim-benhamadi/" target="_blank"><i class="fas fa-laptop-code"></i></a>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="../index.html" class="nav-link"><i class="fas fa-user"></i> About</a>
+            <a href="experience.html" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="education.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="skills.html" class="nav-link"><i class="fas fa-code"></i> Skills</a>
+            <a href="badges.html" class="nav-link"><i class="fas fa-certificate"></i> Badges</a>
+            <a href="awards.html" class="nav-link"><i class="fas fa-trophy"></i> Awards</a>
+            <a href="publications.html" class="nav-link active"><i class="fas fa-book"></i> Publications</a>
+        </nav>
+
+        <a href="../assets/resume.pdf" download class="download-btn">
+            <i class="fas fa-download"></i> Download Resume
+        </a>
+    </aside>
+
+    <main class="main-content">
+        <h2 class="section-title">📑 Publications</h2>
+        
+        <div class="publication-card">
+            <div class="publication-title">Movement- and Traffic-based User Identification in Commercial Virtual Reality Applications: Threats and Opportunities</div>
+            <div class="publication-authors">Sara Baldoni, Salim Benhamadi, Federico Chiariotti, Michele Zorzi, Federica Battisti</div>
+            <div class="publication-venue">IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR), 2025</div>
+            <div class="publication-abstract">
+                With the unprecedented diffusion of virtual reality, the number of application scenarios is continuously growing. As commercial and gaming applications become pervasive, the need for secure and convenient identification of users, often overlooked by research in immersive media, is becoming increasingly pressing. This work investigates user identification through movement patterns and data traffic traces in commercial VR games, analyzing both opportunities for content customization and privacy implications.
+            </div>
+            <div class="skills-tags">
+                <span class="skill-tag">Virtual Reality</span>
+                <span class="skill-tag">User Identification</span>
+                <span class="skill-tag">Privacy</span>
+                <span class="skill-tag">Network Analysis</span>
+                <span class="skill-tag">Security</span>
+            </div>
+            <div class="publication-links">
+                <a href="https://arxiv.org/abs/2501.16326" class="pub-btn" target="_blank">
+                    <i class="fas fa-file-pdf"></i> PDF
+                </a>
+                <a href="https://github.com/salim-benhamadi/VR-User-Identification" class="pub-btn" target="_blank">
+                    <i class="fas fa-code"></i> Code
+                </a>
+                <a href="../assets/citations/vr-2025.bib" class="pub-btn" download>
+                    <i class="fas fa-quote-right"></i> Cite
+                </a>
+            </div>
+        </div>
+
+        <div class="publication-card">
+            <div class="publication-title">Automated Semiconductor Test Data Analysis Using a Hybrid Deep Learning Pipeline</div>
+            <div class="publication-authors">Salim Benhamadi, Massimo Pierobon, Giorgia Cassetta, Sabrina Santirosi</div>
+            <div class="publication-venue">5th European Automotive Reliability, Test and Safety Workshop (eARTS), 2025</div>
+            <div class="publication-abstract">
+                Manual analysis of test data plots in semiconductor manufacturing creates a significant bottleneck in production optimization, with product engineers dedicating extensive hours to reviewing patterns, anomalies, and making assessments. This study presents an automated approach based on computer vision and machine learning to streamline this process. We developed a multi-stage pipeline that detects and extracts plots from various document formats using Faster R-CNN, generates feature embeddings via Vision Transformer (ViT-B/32), and employs Affinity Propagation clustering alongside Isolation Forest for anomaly detection.
+            </div>
+            <div class="skills-tags">
+                <span class="skill-tag">Semiconductor Testing</span>
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">Anomaly Detection</span>
+                <span class="skill-tag">Machine Learning</span>
+            </div>
+        </div>
+
+        <div class="publication-card">
+            <div class="publication-title">Optimization of Test Insertions in Semiconductor Manufacturing Using Reinforcement Learning</div>
+            <div class="publication-authors">Salim Benhamadi, Alin Alexandru Caluseriu, Giorgia Cassetta, Marco D'Acunzo, Marius Sorin Neagoe</div>
+            <div class="publication-venue">5th European Automotive Reliability, Test and Safety Workshop (eARTS), 2025</div>
+            <div class="publication-abstract">
+                In semiconductor manufacturing, test insertion reduction—the strategic elimination of one or more temperature-based test insertions—offers significant cost and time savings, but requires carefully optimizing test limits to maintain quality control. This paper addresses the challenge of test insertion reduction through advanced limit optimization techniques that balance multiple competing objectives: maximizing failure detection while minimizing false rejections and maintaining process capability. We propose a reinforcement learning (RL) based approach for automatically optimizing test limits to enable effective test insertion reduction.
+            </div>
+            <div class="skills-tags">
+                <span class="skill-tag">Reinforcement Learning</span>
+                <span class="skill-tag">Semiconductor Testing</span>
+                <span class="skill-tag">Optimization</span>
+                <span class="skill-tag">Quality Control</span>
+                <span class="skill-tag">Multi-objective Optimization</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

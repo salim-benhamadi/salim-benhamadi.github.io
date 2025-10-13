@@ -1,0 +1,95 @@
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 24px;
+}
+
+.nav-menu a,
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menu a::before,
+.nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #000000, #404040);
+  transform: scaleY(0);
+  transition: transform 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000000;
+  transform: translateX(4px);
+}
+
+.nav-menu a:hover::before,
+.nav-link:hover::before {
+  transform: scaleY(1);
+}
+
+.nav-menu a.active,
+.nav-link.active {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), rgba(26, 26, 26, 0.05));
+  color: #000000;
+  font-weight: 600;
+}
+
+.nav-menu a.active::before,
+.nav-link.active::before {
+  transform: scaleY(1);
+}
+
+.nav-menu i {
+  width: 24px;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.nav-menu span {
+  flex: 1;
+}
+
+.sidebar-footer {
+  border-top: 1px solid var(--gray-200);
+  padding-top: 24px;
+}
+
+.download-btn {
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #404040 100%);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
