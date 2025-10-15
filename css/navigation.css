@@ -61,10 +61,15 @@
   width: 24px;
   font-size: 16px;
   margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .nav-menu span {
   flex: 1;
+}
+
+.sidebar.collapsed .nav-menu span {
+  display: none;
 }
 
 .sidebar-footer {
@@ -92,4 +97,20 @@
 .download-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn i {
+  flex-shrink: 0;
+}
+
+.download-btn span {
+  flex: 1;
+}
+
+.sidebar.collapsed .download-btn span {
+  display: none;
+}
+
+.sidebar.collapsed .download-btn i {
+  margin: 0;
 }
