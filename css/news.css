@@ -1,0 +1,224 @@
+/* ============================================
+   NEWS/UPDATES SECTION - COMPLETE STYLES
+   ============================================ */
+
+/* Main News Section Container */
+.news-section {
+    margin-bottom: 80px;
+}
+
+/* News List Wrapper - Card Background */
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual News Item - Grid Layout */
+.news-item {
+    display: grid;
+    grid-template-columns: 140px 1fr auto;
+    gap: 32px;
+    align-items: start;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* First Item - Remove Top Padding */
+.news-item:first-child {
+    padding-top: 0;
+}
+
+/* Last Item - Remove Bottom Border & Padding */
+.news-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Gradient Underline Animation on Hover */
+.news-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #000000, #404040, transparent);
+    transition: width 0.5s ease;
+}
+
+.news-item:hover::before {
+    width: 100%;
+}
+
+/* Hover Effect - Background Highlight */
+.news-item:hover {
+    background: rgba(0, 0, 0, 0.02);
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+/* Date Column */
+.news-date {
+    font-size: 14px;
+    color: #94a3b8;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding-top: 2px;
+}
+
+/* Content Column - Main Content Area */
+.news-content {
+    min-width: 0;
+}
+
+/* News Header - Title + Badge Container */
+.news-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+/* News Title */
+.news-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Badge Styling */
+.news-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: all 0.3s;
+}
+
+/* Featured Badge - Special Styling */
+.news-badge.featured {
+    background: linear-gradient(135deg, #1a1a1a 0%, #404040 100%);
+    color: white;
+}
+
+/* Badge Animation on Item Hover */
+.news-item:hover .news-badge {
+    transform: translateY(-2px);
+}
+
+/* News Description Text */
+.news-description {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Action Button Column */
+.news-actions {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2px;
+}
+
+/* Action Link/Button */
+.news-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0f172a;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.news-link:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateX(-4px);
+}
+
+/* Arrow Icon in Link */
+.news-link i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.news-link:hover i {
+    transform: translateX(4px);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
+
+/* Tablet & Mobile - Stack Layout */
+@media (max-width: 968px) {
+    .news-item {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px 0;
+    }
+    
+    .news-date {
+        order: -1;
+        font-size: 13px;
+    }
+    
+    .news-actions {
+        justify-content: flex-start;
+    }
+    
+    .news-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 640px) {
+    .news-list {
+        padding: 24px;
+    }
+    
+    .news-item {
+        padding: 20px 0;
+    }
+    
+    .news-title {
+        font-size: 16px;
+    }
+    
+    .news-description {
+        font-size: 14px;
+    }
+    
+    .news-badge {
+        font-size: 9px;
+        padding: 3px 10px;
+    }
+}
